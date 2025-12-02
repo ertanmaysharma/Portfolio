@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Portfolio</title>
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <div id="login-screen" class="login-screen">
+        <div class="login-box">
+            <h1>Admin Login</h1>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p id="login-error" class="error"></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="admin-panel" class="admin-panel" style="display: none;">
+        <nav class="admin-nav">
+            <h1>Admin Panel</h1>
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </nav>
+
+        <div class="admin-content">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="keywords">Keywords</button>
+                <button class="tab-btn" data-tab="services">Services</button>
+                <button class="tab-btn" data-tab="skills">Skills</button>
+                <button class="tab-btn" data-tab="education">Education</button>
+                <button class="tab-btn" data-tab="achievements">Achievements</button>
+            </div>
+
+            <!-- Keywords Tab -->
+            <div id="keywords-tab" class="tab-content active">
+                <h2>Manage Keywords</h2>
+                <form id="keyword-form" class="admin-form">
+                    <input type="hidden" id="keyword-id">
+                    <input type="text" id="keyword-text" placeholder="Keyword (e.g., AI engineering)" required>
+                    <input type="number" id="keyword-order" placeholder="Order" min="0" required>
+                    <button type="submit">Add Keyword</button>
+                </form>
+                <div id="keywords-list" class="items-list"></div>
+            </div>
+
+            <!-- Services Tab -->
+            <div id="services-tab" class="tab-content">
+                <h2>Manage Services</h2>
+                <form id="service-form" class="admin-form">
+                    <input type="hidden" id="service-id">
+                    <input type="text" id="service-title" placeholder="Service Title" required>
+                    <textarea id="service-description" placeholder="Description" required></textarea>
+                    <input type="text" id="service-icon" placeholder="Icon (emoji)" required>
+                    <input type="number" id="service-order" placeholder="Order" min="0" required>
+                    <button type="submit">Add Service</button>
+                </form>
+                <div id="services-list" class="items-list"></div>
+            </div>
+
+            <!-- Skills Tab -->
+            <div id="skills-tab" class="tab-content">
+                <h2>Manage Skills</h2>
+                <form id="skill-form" class="admin-form">
+                    <input type="hidden" id="skill-id">
+                    <input type="text" id="skill-name" placeholder="Skill Name" required>
+                    <input type="text" id="skill-icon" placeholder="Icon (emoji)" required>
+                    <input type="number" id="skill-order" placeholder="Order" min="0" required>
+                    <button type="submit">Add Skill</button>
+                </form>
+                <div id="skills-list" class="items-list"></div>
+            </div>
+
+            <!-- Education Tab -->
+            <div id="education-tab" class="tab-content">
+                <h2>Manage Education</h2>
+                <form id="education-form" class="admin-form">
+                    <input type="hidden" id="education-id">
+                    <input type="text" id="education-degree" placeholder="Degree" required>
+                    <input type="text" id="education-institution" placeholder="Institution" required>
+                    <input type="number" id="education-start-year" placeholder="Start Year" required>
+                    <input type="number" id="education-end-year" placeholder="End Year (leave empty if ongoing)">
+                    <input type="text" id="education-status" placeholder="Status (e.g., Pursuing, Completed)" required>
+                    <button type="submit">Add Education</button>
+                </form>
+                <div id="education-list" class="items-list"></div>
+            </div>
+
+            <!-- Achievements Tab -->
+            <div id="achievements-tab" class="tab-content">
+                <h2>Manage Achievements</h2>
+                <div class="achievement-type-selector">
+                    <button class="type-btn active" data-type="internship">Internships</button>
+                    <button class="type-btn" data-type="certificate">Certificates</button>
+                </div>
+                <form id="achievement-form" class="admin-form">
+                    <input type="hidden" id="achievement-id">
+                    <input type="hidden" id="achievement-type" value="internship">
+                    <input type="text" id="achievement-title" placeholder="Title" required>
+                    <textarea id="achievement-description" placeholder="Description"></textarea>
+                    <input type="file" id="achievement-image" accept="image/*">
+                    <button type="submit">Add Achievement</button>
+                </form>
+                <div id="achievements-list" class="items-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanmay Sharma - Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon.png" >
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">TANMAY SHARMA</div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+            <a href="admin.html" class="admin-link">Admin</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="profile.jpg" alt="Tanmay Sharma" class="profile-img">
+            <div class="hero-text">
+                <p class="greeting">Hi, It's</p>
+                <h1>Tanmay</h1>
+                <p class="role">I'm a <span class="highlight" id="rotating-keyword">Developer</span></p>
+                <p class="description" id="hero-description">
+                    Passionate about creating innovative digital solutions. Specializing in AI engineering, video editing, UI/UX design, and web development to bring ideas to life.
+                </p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/ertanmaysharma" target="_blank" class="social-icon"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="https://instagram.com/tanmay.er" target="_blank" class="social-icon"><img src="instagram-icon.jpg" alt="Instagram"></a>
+                    <a href="https://fiverr.com/tanmay_es" target="_blank" class="social-icon"><img src="fiverr-icon.png" alt="Fiverr"></a>
+                    <a href="mailto:ertanmaysharma@gmail.com" class="social-icon"><img src="email-icon.png" alt="Email"></a>
+                </div>
+                <button class="hire-btn" id="hire-btn">Hire me</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Let's Work Together!</h2>
+            <div class="modal-contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <div>
+                        <p class="contact-label">Phone</p>
+                        <p class="contact-value">7840000333</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <div>
+                        <p class="contact-label">Email</p>
+                        <p class="contact-value">ertanmaysharma@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📸</span>
+                    <div>
+                        <p class="contact-label">Instagram</p>
+                        <p class="contact-value">@tanmay.er</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">💼</span>
+                    <div>
+                        <p class="contact-label">Fiverr</p>
+                        <p class="contact-value">@tanmay_es</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="services" class="services">
+        <h2>Services</h2>
+        <p class="section-subtitle">Professional services tailored to bring your vision to life</p>
+        <div id="services-grid" class="services-grid"></div>
+        <a href="https://fiverr.com/tanmay_es" target="_blank"><button class="view-fiverr-btn">View on Fiverr</button></a>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+        <div id="skills-grid" class="skills-grid"></div>
+    </section>
+
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <p class="section-subtitle">Academic background and qualifications</p>
+        <div id="education-grid" class="education-grid"></div>
+    </section>
+
+    <section id="achievements" class="achievements">
+        <h2>Achievements</h2>
+        <p class="section-subtitle">Professional experience and certifications</p>
+        
+        <div class="achievement-section">
+            <h3><span class="icon">💼</span> Internships</h3>
+            <div id="internships-grid" class="achievement-grid"></div>
+        </div>
+
+        <div class="achievement-section">
+            <h3><span class="icon">🏆</span> Certificates</h3>
+            <div id="certificates-grid" class="achievement-grid"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <p class="section-subtitle">I'm always open to new opportunities and collaborations. Feel free to reach out through any of these channels.</p>
+        <div class="contact-email">
+            <span class="email-icon">✉</span>
+            <a href="mailto:ertanmaysharma@gmail.com">ertanmaysharma@gmail.com</a>
+        </div>
+        <div class="contact-buttons">
+            <a href="mailto:ertanmaysharma@gmail.com"><button class="contact-btn">Email</button></a>
+            <a href="https://linkedin.com/in/ertanmaysharma" target="_blank"><button class="contact-btn">LinkedIn</button></a>
+            <a href="https://instagram.com/tanmay.er" target="_blank"><button class="contact-btn">Instagram</button></a>
+            <a href="https://fiverr.com/tanmay_es" target="_blank"><button class="contact-btn">Fiverr</button></a>
+        </div>
+        <footer>
+            <p>© 2025 Tanmay Sharma. All rights reserved.</p>
+        </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
